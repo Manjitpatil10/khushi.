@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Background effects -->
+    <div id="hearts-container"></div>
+
+    <!-- MUSIC -->
+    <audio id="birthdaySong" loop>
+        <source src="assets/birthday-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicBtn" class="music-btn">
+        🎵
+    </button>
+
+   <!-- INTRO SCREEN WITH BACKGROUND VIDEO -->
+
+<section id="intro" class="intro-screen">
+
+    <!-- Background Video -->
+    <video
+        class="intro-video"
+        autoplay
+        muted
+        loop
+        playsinline
+    >
+        <source src="assets/intro-video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Dark Overlay -->
+    <div class="intro-overlay"></div>
+
+    <!-- Content -->
+    <div class="intro-content">
+
+        <div class="gift" id="gift">
+            🎁
+        </div>
+
+        <h1>
+            Someone Special Has A Birthday... ✨
+        </h1>
+
+        <p>
+            There is a little surprise waiting for you ❤️
+        </p>
+
+        <button id="openBtn" class="main-btn">
+            Open Your Surprise 💝
+        </button>
+
+    </div>
+
+</section>
+
+    <!-- MAIN WEBSITE -->
+    <main id="mainContent" class="hidden">
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="sparkle">✨</div>
+
+            <p class="small-title">Today is all about YOU</p>
+
+            <h1>
+                Happy Birthday
+                <span>Beautiful! ❤️</span>
+            </h1>
+
+            <p class="hero-text">
+                May your smile always be as beautiful as it is today.
+            </p>
+
+            <div class="scroll-down">
+                ↓
+            </div>
+
+        </section>
+
+
+        <!-- PHOTO SECTION -->
+        <section class="photos-section">
+
+            <p class="section-label">Beautiful Memories</p>
+
+            <h2>A Few Moments With You 📸</h2>
+
+            <div class="photo-grid">
+
+                <div class="photo-card">
+                    <img src="assets/photo1.jpg" alt="Beautiful memory">
+                    <div class="photo-overlay">✨</div>
+                </div>
+
+                <div class="photo-card featured">
+                    <img src="assets/photo2.jpg" alt="Beautiful memory">
+                    <div class="photo-overlay">❤️</div>
+                </div>
+
+                <div class="photo-card">
+                    <img src="assets/photo3.jpg" alt="Beautiful memory">
+                    <div class="photo-overlay">🌸</div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MESSAGE -->
+        <section class="message-section">
+
+            <div class="message-card">
+
+                <div class="heart-icon">💗</div>
+
+                <p class="section-label">A Little Message</p>
+
+                <h2>For Someone Special</h2>
+
+                <p class="message">
+
+                    Happy Birthday to one of the most amazing people
+                    I've had the chance to know. ❤️
+
+                    <br><br>
+
+                    I hope this new year of your life brings you
+                    countless reasons to smile, beautiful memories,
+                    success in everything you do and lots of happiness.
+
+                    <br><br>
+
+                    Never stop being the wonderful person you are.
+                    Keep smiling, keep shining and keep chasing
+                    your dreams.
+
+                    <br><br>
+
+                    You deserve all the happiness in the world. 🌸
+
+                </p>
+
+                <div class="signature">
+                    With lots of love ❤️
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SURPRISE VIDEO -->
+<section class="video-section">
+
+    <p class="section-label">A Special Surprise</p>
+
+    <h2>There Is Something For You 🎬</h2>
+
+    <p class="video-subtitle">
+        Click the button when you're ready for your little surprise ❤️
+    </p>
+
+    <button id="videoBtn" class="video-btn">
+        ▶️ Watch Your Surprise
+    </button>
+
+</section>
+
+
+<!-- VIDEO POPUP -->
+<div id="videoPopup" class="video-popup hidden">
+
+    <div class="video-box">
+
+        <button id="closeVideo" class="close-video">
+            ✕
+        </button>
+
+        <video id="surpriseVideo" controls playsinline>
+            <source src="assets/birthday-video.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+
+    </div>
+
+</div>
+<!-- COUNTING -->
+        <section class="wish-section">
+
+            <h2>Make A Wish 🎂</h2>
+
+            <p>
+                Close your eyes, make a beautiful wish
+                and blow the candles. ✨
+            </p>
+
+            <div class="cake-container">
+
+                <div class="cake">
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+
+                    <div class="cake-top"></div>
+                    <div class="cake-body"></div>
+                </div>
+
+            </div>
+
+            <button id="wishBtn" class="main-btn">
+                Make A Wish ✨
+            </button>
+
+        </section>
+
+
+        <!-- FINAL -->
+        <section class="final-section">
+
+            <div class="final-content">
+
+                <div class="big-heart">
+                    ❤️
+                </div>
+
+                <h2>
+                    Once Again...
+                </h2>
+
+                <h1>
+                    Happy Birthday! 🎂
+                </h1>
+
+                <p>
+                    Keep smiling. Keep shining.
+                    And always remember how special you are. ✨
+                </p>
+
+                <div class="final-line">
+                    Made with ❤️ just for you
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- POPUP -->
+    <div id="wishPopup" class="popup hidden">
+
+        <div class="popup-box">
+
+            <div class="popup-cake">
+                🎂
+            </div>
+
+            <h2>Your Wish Is On Its Way! ✨</h2>
+
+            <p>
+                May this year bring you everything
+                your heart wishes for. ❤️
+            </p>
+
+            <button id="closePopup" class="main-btn">
+                Thank You 💕
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
