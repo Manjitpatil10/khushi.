@@ -1026,3 +1026,105 @@ body {
     }
 
 }
+/* ===== SURPRISE COUNTDOWN ===== */
+
+.surprise-lock {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.lock-countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  width: min(440px, 90%);
+  padding: 18px 20px;
+
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50px;
+
+  color: #e83e98;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,0.18),
+    0 0 20px rgba(232,62,152,0.15);
+
+  backdrop-filter: blur(10px);
+}
+
+.lock-countdown small {
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.7;
+  margin-left: -5px;
+}
+
+.lock-countdown b {
+  color: #999;
+  font-weight: 500;
+}
+
+.lock-icon {
+  font-size: 20px;
+  margin-right: 3px;
+}
+
+
+/* Unlock hone ke baad button */
+
+.open-surprise-btn {
+  width: min(440px, 90%);
+  padding: 20px;
+
+  border: none;
+  border-radius: 50px;
+
+  background: white;
+  color: #e83e98;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+
+  animation: surpriseReady 1.5s infinite;
+}
+
+@keyframes surpriseReady {
+
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+  .lock-countdown {
+    gap: 5px;
+    padding: 17px 14px;
+    font-size: 19px;
+  }
+
+  .lock-icon {
+    font-size: 18px;
+  }
+
+}
