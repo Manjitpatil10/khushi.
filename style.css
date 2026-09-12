@@ -1128,3 +1128,78 @@ body {
   }
 
 }
+// =====================================
+// SURPRISE UNLOCK COUNTDOWN
+// =====================================
+
+// YAHAN DATE + TIME CHANGE KARNA HAI
+const unlockDate = new Date("2026-09-16T12:00:00").getTime();
+
+
+const lockCountdown =
+  document.getElementById("lockCountdown");
+
+const openSurpriseBtn =
+  document.getElementById("openSurpriseBtn");
+
+
+function updateSurpriseCountdown() {
+
+  const now = new Date().getTime();
+
+  const distance = unlockDate - now;
+
+
+  // ===== UNLOCK =====
+
+  if (distance <= 0) {
+
+    lockCountdown.style.display = "none";
+
+    openSurpriseBtn.style.display = "block";
+
+    clearInterval(surpriseCountdownTimer);
+
+    return;
+  }
+
+
+  // ===== CALCULATE TIME =====
+
+  const days = Math.floor(
+    distance / (1000 * 60 * 60 * 24)
+  );
+
+  const hours = Math.floor(
+    (distance / (1000 * 60 * 60)) % 24
+  );
+
+  const minutes = Math.floor(
+    (distance / (1000 * 60)) % 60
+  );
+
+  const seconds = Math.floor(
+    (distance / 1000) % 60
+  );
+
+
+  // ===== DISPLAY =====
+
+  document.getElementById("cdDays").textContent =
+    String(days).padStart(2, "0");
+
+  document.getElementById("cdHours").textContent =
+    String(hours).padStart(2, "0");
+
+  document.getElementById("cdMinutes").textContent =
+    String(minutes).padStart(2, "0");
+
+  document.getElementById("cdSeconds").textContent =
+    String(seconds).padStart(2, "0");
+}
+
+
+updateSurpriseCountdown();
+
+const surpriseCountdownTimer =
+  setInterval(updateSurpriseCountdown, 1000);
